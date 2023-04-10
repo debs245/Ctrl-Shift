@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  cursor: url('images-removebg-preview (1).png'),auto;
+  }
+html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  margin: 0;
+  padding: 0; 
+  }
+
+/* Navigation Bar */
+.navbar {
+  overflow: hidden;
+   background-image: linear-gradient(to bottom right, #AE7944,#F1A96A);
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  position: fixed;
+  z-index: 2;
+  scroll-snap-type: none;
+  height: 50px; 
+  }
+
+.navbar a {
+  display: block;
+  color: white; 
+  text-align: center; 
+  padding: 14px;
+  text-decoration: none;
+  float: left;
+  width: 100%;
+  font-size: 20px;
+  font-family: 'Crete Round', serif
+
+  }
+
+  .content {
+    padding: 16px;
+    }
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+a {
+  background-image: linear-gradient(
+    to right,
+    #4B5A3C,
+    #4B5A3C 50%,
+    white 50%
+  );
+   background-size: 200% 100%;
+  background-position: -100%;
+   -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+   transition: all 0.3s ease-in-out;
+}
+
+a:before {
+  content: '';
+  background: #4B5A3C;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+}
+a:hover {
+ background-position: 0;
+}
+a:hover::before {
+  width: 100%;
+}
+
+img {
+  display: inline; 
+  width: 150px;
+  height: 150px; 
+  object-fit: cover; 
+  border-radius: 50%;
+  padding: 10px; 
+}
+.icon {
+  width: 40px; 
+  height: auto; 
+  object-fit: cover; 
+  margin-top: 0;
+  padding-top: 0; 
+}
+
+
+/* Background */
+.overlay {
+  position: absolute;
+  z-index: 1; 
+  left: 7%;
+  font-size: 80px;
+  width: 500px;
+  color: white; 
+  scroll-snap-type: none;
+ font-family: 'Abril Fatface', cursive;
+  opacity: 50%; 
+  letter-spacing: 7px;
+  animation-name: opening;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  
+}
+
+@keyframes opening {
+  from {top: 30%;}
+  to {top: 20%;}
+}
+
+video {
+  z-index: 0;
+  scroll-snap-type: none;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.welcome {
+  color: orange; 
+  opacity: 1; 
+}
+
+.wild {
+  font-style: italic;
+}
